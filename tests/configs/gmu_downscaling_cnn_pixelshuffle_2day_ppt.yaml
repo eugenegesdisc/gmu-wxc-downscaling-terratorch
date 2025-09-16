@@ -1,0 +1,55 @@
+trainer:
+  max_epochs: 10
+model:
+  class_path: GmuDowncalingCnnTask
+  dict_kwargs:
+    model_config:
+      model:
+        backbone: none
+        embed_dim: 480
+        n_blocks_encoder: 8
+        mlp_multiplier: 4
+        n_heads: 16
+        dropout_rate: 0.0
+        drop_path: 0.0
+        residual: none
+        num_static_channels: 7
+        downscaling_patch_size: [3, 3]
+        downscaling_embed_dim: 256
+        encoder_decoder_type: conv
+        encoder_decoder_upsampling_mode: pixel_shuffle
+        encoder_decoder_kernel_size_per_stage: [[3], [3, 3, 3, 3]]
+        encoder_decoder_scale_per_stage: [[2], [2, 2, 2, 2]]
+        encoder_decoder_conv_channels: 32
+        residual_connection: true
+        unet: false
+      data:
+        data_prism_vars: ["ppt", "tdmean", "tmax", "tmean", "tmin", "vpdmax", "vpdmin"]
+        output_vars: ["ppt"]
+        n_input_timestamps: 1
+        downsample_factor: 8
+        n_random_windows: 16
+        crop_factor: 256
+data:
+  class_path: GmuMerra2Downscale2Prism4kmDataModule
+  dict_kwargs:
+    train_data_periods:
+      - "2020-01-01T00:30:00; 2020-01-02T23:59:59"
+    validate_data_periods:
+      - "2021-01-01T00:30:00; 2021-01-02T23:59:59"
+    test_data_periods:
+      - "2022-01-01T00:30:00; 2022-01-02T23:59:59"
+    predict_data_periods:
+      - "2023-01-01T00:30:00; 2023-01-01T23:59:59"
+    earthdata_login_config: "../cfg/.gmu_downscaling_earthdata_login.cfg"
+    download: False
+    extract: False
+    convert: False
+    use_climatology: True
+    use_hr_auxiliary: True
+    data_root_path: ../exp
+    train_data_folder: merra2day
+    validate_data_folder: vmerra2day
+    test_data_folder: tmerra2day
+    predict_data_folder: pmerra1day
+    position_encoding: fourier

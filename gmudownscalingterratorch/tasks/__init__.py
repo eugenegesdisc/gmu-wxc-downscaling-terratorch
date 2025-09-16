@@ -1,0 +1,6 @@
+from .gmu_custom_semantic_segmentation_task import GmuCustomSemanticSegmentationTask
+from .gmu_wxc_task import GmuWxcTask
+from .gmu_wxc_downscale_merra2_prism_task import GmuWxcDownscaleMerra2PrismTask
+#from .gmu_prithvi_wxc_downscaling_task import GmuPrithviWxcDownscalingTask
+from .ibm_granite_prithvi_wxc_downscaling_task import IbmGranitePrithviWxcDownscalingTask
+from .gmu_downscaling_cnn_task import GmuDowncalingCnnTask
