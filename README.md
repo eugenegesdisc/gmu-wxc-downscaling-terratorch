@@ -37,6 +37,11 @@ python -m pip install '.[examples]'
 
 python -m pip install -U 'jsonargparse[signatures]'
 
+```
+
+Install any other needed libraries. For example, the following for testing and logging visualization.
+
+```
 conda install pytest -c conda-forge
 conda install tensorboard -c conda-forge
 ```
