@@ -87,6 +87,6 @@ To predict with the latest version (checkpoint), an example run can be as follow
 ```
 python -m gmudownscalingterratorch predict --trainer.default_root_dir "../exs/merra2day/tmean/e10" -c "tests/configs/gmu_downscaling_cnn_pixelshuffle_2day.yaml"
 ```
-Severeral other experimental configurations can be found under tests/configs.
+Several other experimental configurations can be found under tests/configs.
 
 
