@@ -54,7 +54,7 @@ See examples/config for an template. Either username/password or token ( edl_tok
 
 ## Run the programs
 
-### Preparare the data - train, validate, test, or predict
+### Prepare the data - train, validate, test, or predict
 
 The following examples show how to run programs from the cloned program directory:
 
