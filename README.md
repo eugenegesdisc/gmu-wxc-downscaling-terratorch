@@ -70,13 +70,13 @@ nohup bash -c 'time python -m gmudownscalingterratorch fit --trainer.default_roo
 
 This program uses LightningCLI with torchgeo as the base. So, you can override certain parameters to carry out different experiments.
 
-To test with the latest version, an example run can be as follows:
+To test with the latest version (checkpoint), an example run can be as follows:
 
 ```
 python -m gmudownscalingterratorch test --trainer.default_root_dir "../exs/merra2day/tmean/e10" -c "tests/configs/gmu_downscaling_cnn_pixelshuffle_2day.yaml"
 ```
 
-To predict with the latest version, an example run can be as follows:
+To predict with the latest version (checkpoint), an example run can be as follows:
 
 ```
 python -m gmudownscalingterratorch predict --trainer.default_root_dir "../exs/merra2day/tmean/e10" -c "tests/configs/gmu_downscaling_cnn_pixelshuffle_2day.yaml"
