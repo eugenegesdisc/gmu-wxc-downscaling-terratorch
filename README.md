@@ -61,8 +61,9 @@ time python -m gmudownscalingterratorch cmd prepdataset --input-times "2020-01-0
 The followinng example show how to train the after in the activated conda environment:
 
 ```
-$ PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-$ nohup bash -c 'time python -m gmudownscalingterratorch fit --trainer.default_root_dir "../exs/merra2day/tmean/e10" --trainer.strategy=ddp_find_unused_parameters_true --trainer.log_every_n_steps=10 --trainer.max_epochs=10 -c "tests/configs/gmu_downscaling_cnn_pixelshuffle_2day.yaml"' > ../logs/merra2day/train_log_tmean_e10.txt 2>../logs/merra2day/train_log_tmean_e10.err &
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+nohup bash -c 'time python -m gmudownscalingterratorch fit --trainer.default_root_dir "../exs/merra2day/tmean/e10" --trainer.strategy=ddp_find_unused_parameters_true --trainer.log_every_n_steps=10 --trainer.max_epochs=10 -c "tests/configs/gmu_downscaling_cnn_pixelshuffle_2day.yaml"' > ../logs/merra2day/train_log_tmean_e10.txt 2>../logs/merra2day/train_log_tmean_e10.err &
 ```
 
 This program uses LightningCLI with torchgeo as the base. So, you can override certain parameters to carry out different experiments.
