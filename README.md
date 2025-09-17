@@ -53,9 +53,9 @@ See examples/config for an template. Either username/password or token ( edl_tok
 
 The following examples show how to run programs from the cloned program directory:
 
-Make necessary directorys for logs, lighntning logs.
+Make necessary directories for logs, lighntning logs, etc., before running the programs.
 
-The following example show to prepare training dateset using 10 day data:
+The following example show how to prepare a training dateset using 10 day data:
 ```
 time python -m gmudownscalingterratorch cmd prepdataset --input-times "2020-01-01; 2020-01-10 23:59:59" --root-dir "../exp" --name-of-sample merra10day --download --extract --convert
 ```
