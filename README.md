@@ -15,7 +15,8 @@ conda install pytorch -c conda-forge
 conda install -c conda-forge gdal lightning torchgeo libgdal-hdf5 libgdal-netcdf
 ```
 
-Following the step to install Prithvi-WxC:
+Following the steps to install Prithvi-WxC:
+
 Installing Prithvi-WxC ( https://github.com/NASA-IMPACT/Prithvi-WxC )
 
 ```
