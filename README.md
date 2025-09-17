@@ -55,7 +55,9 @@ The following examples show how to run programs from the cloned program director
 Make necessary directorys for logs, lighntning logs.
 
 The following example show to prepare training dateset using 10 day data:
+```
 time python -m gmudownscalingterratorch cmd prepdataset --input-times "2020-01-01; 2020-01-10 23:59:59" --root-dir "../exp" --name-of-sample merra10day --download --extract --convert
+```
 
 ### Train (fit), test or predict
 The followinng example show how to train the after in the activated conda environment:
