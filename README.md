@@ -42,7 +42,7 @@ conda install tensorboard -c conda-forge
 
 ## Configure Credentials for downloading from Earthdata
 
-See examples/config for an template. The default directory and configuration file is located at the following:
+See examples/config for an template. Either username/password or token ( edl_token ) can be configured. Token takes preference if both are set. The default directory and configuration file is located at the following:
 ../cfg/.gmu_downscaling_earthdata_login.cfg
 
 
