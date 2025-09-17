@@ -60,7 +60,7 @@ time python -m gmudownscalingterratorch cmd prepdataset --input-times "2020-01-0
 ```
 
 ### Train (fit), test or predict
-The followinng example show how to train the after in the activated conda environment:
+The followinng example shows how to train an model (defined in the configuration file) in the activated conda environment:
 
 ```
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
